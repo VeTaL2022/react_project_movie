@@ -1,0 +1,30 @@
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aquamarine;
+    height: 60px;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 24px;
+}
+.Header {
+    display: flex;
+    justify-content: space-around;
+    font-family: cursive;
+    background-color: lightblue;
+    height: 40px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.Search {
+    text-align: right;
+}
+.Search input, button {
+    font-family: cursive;
+}
+button{
+    cursor: pointer;
+}
