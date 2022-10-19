@@ -1,7 +1,19 @@
-.Info{
-    background-color: #61dafb;
-    width: 16%;
-    text-align: center;
+.Info {
+    /*background-color: #61dafb;*/
+    border: 3px solid slategrey;
+    width: 15%;
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 12px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+.Info h3{
+    padding: 0 5px 0 5px;
+}
+.Info p {
+    border: 2px solid lightslategrey;
 }
