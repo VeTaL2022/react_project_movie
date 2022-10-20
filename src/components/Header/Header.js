@@ -7,8 +7,12 @@ export const Header = () => {
         <div>
             <NavLink className={css.Home} to={'/home'}>Home</NavLink>
             <div className={css.Header}>
-                <NavLink to={'/movies'}>Get Movies</NavLink>
-                <NavLink to={'/genres'}>Get Genres</NavLink>
+                <NavLink to={'/movies'}>
+                    <button>Get Movies</button>
+                </NavLink>
+                <NavLink to={'/genres'}>
+                    <button>Get Genres</button>
+                </NavLink>
                 <div className={css.Search}>
                     <input type="text" placeholder={'search films'}/>
                     <button>Search</button>

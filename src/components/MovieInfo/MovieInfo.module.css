@@ -1,6 +1,6 @@
 .Info {
-    /*background-color: #61dafb;*/
     border: 3px solid slategrey;
+    border-radius: 20px;
     width: 15%;
     margin-bottom: 20px;
     font-size: 12px;
@@ -11,9 +11,14 @@
     flex-wrap: wrap;
     padding: 5px;
 }
+.Info img {
+    border-radius: 10px;
+}
 .Info h3{
     padding: 0 5px 0 5px;
 }
 .Info p {
     border: 2px solid lightslategrey;
+    border-radius: 15px;
+    padding: 2px;
 }

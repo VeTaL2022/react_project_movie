@@ -5,7 +5,7 @@ import {useForm} from "react-hook-form";
 import {genreActions} from "../../redux";
 import {movieService} from "../../services";
 import {MovieInfo} from "../MovieInfo/MovieInfo";
-import {json} from "react-router-dom";
+import css from './GenreBadge.module.css';
 
 export const GenreBadge = () => {
     const {register, handleSubmit} = useForm({defaultValues: {id: 1}});
@@ -25,15 +25,17 @@ export const GenreBadge = () => {
         setGenre(nes);
     }
     return (
-        <div style={{display:'flex', justifyContent:'space-around', flexWrap:'wrap'}}>
+        <div className={css.Genre}>
             <form onChange={handleSubmit(ss)}>
                 <select {...register('id')}>
                     {genres.map(genre => (
                         <option key={genre.id} value={genre.id}>{genre.name}</option>
-                        ))}
+                    ))}
                 </select>
             </form>
-            {genre && genre.map(gen => <MovieInfo movie={gen} key={gen.id}/>)}
+            <div>
+                {genre && genre.map(gen => <MovieInfo movie={gen} key={gen.id}/>)}
+            </div>
         </div>
     )
 }
