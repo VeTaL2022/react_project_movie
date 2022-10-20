@@ -3,6 +3,9 @@ import {useEffect, useState} from "react";
 import {useForm} from "react-hook-form";
 
 import {genreActions} from "../../redux";
+import {movieService} from "../../services";
+import {MovieInfo} from "../MovieInfo/MovieInfo";
+import {json} from "react-router-dom";
 
 export const GenreBadge = () => {
     const {register, handleSubmit} = useForm({defaultValues: {id: 1}});
@@ -16,10 +19,13 @@ export const GenreBadge = () => {
     }, [dispatch]);
 
     const ss = async ({id}) => {
-        console.log(id);
+        const {data} = await movieService.getAll();
+        const {results} = data;
+        const nes = results.filter(value => value.genre_ids.includes(+id));
+        setGenre(nes);
     }
     return (
-        <div>
+        <div style={{display:'flex', justifyContent:'space-around', flexWrap:'wrap'}}>
             <form onChange={handleSubmit(ss)}>
                 <select {...register('id')}>
                     {genres.map(genre => (
@@ -27,7 +33,7 @@ export const GenreBadge = () => {
                         ))}
                 </select>
             </form>
-            {genre && <div>{JSON.stringify(genre)}</div>}
+            {genre && genre.map(gen => <MovieInfo movie={gen} key={gen.id}/>)}
         </div>
     )
 }

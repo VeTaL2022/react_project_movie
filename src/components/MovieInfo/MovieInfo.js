@@ -1,9 +1,8 @@
 import css from './MovieInfo.module.css';
 import {StarsRating} from "../StarsRating/StarsRating";
-import {GenreBadge} from "../GenreBadge/GenreBadge";
 
 export const MovieInfo = ({movie}) => {
-    const {title, overview, poster_path, vote_average,genre_ids} = movie;
+    const {title, overview, poster_path, vote_average} = movie;
 
     return (
         <div className={css.Info}>
@@ -11,9 +10,6 @@ export const MovieInfo = ({movie}) => {
             <h3>{title}</h3>
             <p>{overview}</p>
             <div>{<StarsRating rate={vote_average}/>}</div>
-            {/*<p>{JSON.stringify(genre_ids)}</p>*/}
-            {<GenreBadge genre_ids={genre_ids}/>}
         </div>
     )
-
-}
+};
