@@ -3,6 +3,11 @@ import {NavLink} from "react-router-dom";
 import css from './Header.module.css';
 
 export const Header = () => {
+
+    // const dispatch = useDispatch();
+
+    // const {movieName} = useSelector(state => state.movieReducer);
+
     return (
         <div>
             <NavLink className={css.Home} to={'/home'}>Home</NavLink>
