@@ -27,7 +27,7 @@ export const MovieList = () => {
 
     return (
         <div>
-            <div>
+            <div className={css.Button}>
                 <button onClick={prevPage}>Prev</button>
                 <button onClick={nextPage}>Next</button>
             </div>

@@ -1,3 +1,20 @@
+.Button{
+ display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.Button button{
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    font-family: cursive;
+    font-size: medium;
+}
+.Button button:hover{
+    background-color: cornflowerblue;
+    color: snow;
+    padding: 8px 16px 8px 16px;
+}
 .Flex{
     display: flex;
     flex-wrap: wrap;

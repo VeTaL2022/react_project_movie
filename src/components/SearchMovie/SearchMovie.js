@@ -9,13 +9,14 @@ export const SearchMovie = () => {
     const {register, handleSubmit, reset} = useForm();
 
     const {movieName} = useSelector(state => state.movieReducer);
+
     const dispatch = useDispatch();
 
     const submit = ({film}) => {
         dispatch(movieActions.getMovieByName({name: film}));
         reset();
     };
-    console.log(movieName);
+
     return (
         <div>
             <form onSubmit={handleSubmit(submit)} className={css.Form}>
