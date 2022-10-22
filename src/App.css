@@ -12,6 +12,5 @@ button {
     background-color: var(--background);
     border: 2px var(--text-primary) solid;
     border-radius: 10px;
-    float: right;
     transition: all .5s;
 }

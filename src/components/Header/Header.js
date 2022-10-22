@@ -1,27 +1,30 @@
 import {NavLink} from "react-router-dom";
-
 import css from './Header.module.css';
 
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faFilm, faMagnifyingGlass, faSort} from "@fortawesome/free-solid-svg-icons";
+
 export const Header = () => {
-
-    // const dispatch = useDispatch();
-
-    // const {movieName} = useSelector(state => state.movieReducer);
 
     return (
         <div>
             <NavLink className={css.Home} to={'/home'}>Home</NavLink>
             <div className={css.Header}>
                 <NavLink to={'/movies'}>
-                    <button>Get Movies</button>
+                    <button>
+                        <FontAwesomeIcon icon={faFilm}/> Get Movies
+                    </button>
                 </NavLink>
+
                 <NavLink to={'/genres'}>
-                    <button>Get Genres</button>
+                    <button>
+                        <FontAwesomeIcon icon={faSort}/> Get Genres
+                    </button>
                 </NavLink>
-                <div className={css.Search}>
-                    <input type="text" placeholder={'search films'}/>
-                    <button>Search</button>
-                </div>
+
+                <NavLink to={'/find-movie'}>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} style={{color: 'greenyellow', fontSize: '30px'}}/>
+                </NavLink>
             </div>
         </div>
     )

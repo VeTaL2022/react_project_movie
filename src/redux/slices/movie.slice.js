@@ -4,7 +4,7 @@ import {movieService} from "../../services";
 
 const initialState = {
     movie: {},
-    movieName: ''
+    movieName: []
 };
 const getAll = createAsyncThunk(
     'movieSlice/getAll',
@@ -23,7 +23,7 @@ const getMovieByName = createAsyncThunk(
     async ({name}, {rejectWithValue}) => {
         try {
             const {data} = await movieService.getMovieByName(name);
-            return data;
+            return data.results;
         } catch (e) {
             rejectWithValue(e.response.data);
         }

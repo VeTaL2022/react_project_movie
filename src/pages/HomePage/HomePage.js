@@ -5,6 +5,7 @@ import css from './HomePage.module.css';
 
 export const HomePage = () => {
 
+
     return (
         <Carousel className={css.Carousel}>
             <div>
