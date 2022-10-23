@@ -10,5 +10,10 @@
     left: 20%;
 }
 .Details > button{
-    text-align: end;
+    padding: 5px 8px 5px 8px;
+}
+.Details button:hover{
+    padding: 10px 15px 10px 15px;
+    background-color: cornflowerblue;
+    color: snow;
 }

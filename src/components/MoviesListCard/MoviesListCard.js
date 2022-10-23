@@ -11,7 +11,6 @@ export const MoviesListCard = () => {
 
     return (
         <div className={css.Details}>
-            <button onClick={() => navigate('/movies')}>Close</button>
             <div>{adult}</div>
             <img src={'https://image.tmdb.org/t/p/w185'+ backdrop_path} alt={backdrop_path}/>
             <div>{JSON.stringify(genre_ids)}</div>
@@ -26,6 +25,7 @@ export const MoviesListCard = () => {
             <div>{video}</div>
             <div>{vote_average}</div>
             <div>{vote_count}</div>
+            <button onClick={() => navigate('/movies')}>Close</button>
         </div>
     )
 

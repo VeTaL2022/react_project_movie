@@ -1,13 +1,15 @@
 .Carousel {
-    margin: 40px;
+    margin: 10px;
 }
-.Carousel div{
-    width: 95%;
-    height: 520px;
-    margin: 10px auto 0;
+.Carousel img{
+    /*height: 600px;*/
+    margin: 5px auto 0;
     display: flex;
     justify-content: center;
 }
 .Carousel img{
     border-radius: 50px;
+}
+.Carousel button {
+    border: none;
 }
