@@ -13,17 +13,18 @@ code {
 }
 
 :root {
-    --background: white;
-    /*background-image: url("https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000");*/
+    /*--background: white;*/
+    background-image: url("https://img.freepik.com/free-vector/white-abstract-background-theme_23-2148827268.jpg?w=2000");
     --text-primary: black;
     --text-secondary: royalblue;
     --accent: purple;
 }
 
 [data-theme='dark'] {
-    /*background-image: url("https://img.freepik.com/premium-photo/black-stone-texture-dark-slate-background-top-view_88281-1206.jpg?w=2000");*/
-    --background: black;
+    background-image: url("https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/394870/e61ed2bbae4d49678459fbf7c678661e09de1fa7.jpg");
+    /*--background: black;*/
     --text-primary: white;
     --text-secondary: grey;
     --accent: darkred;
+    min-height: 100vh;
 }

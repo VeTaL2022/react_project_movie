@@ -8,7 +8,7 @@ export const Header = () => {
 
     return (
         <div>
-            <NavLink className={css.Home} to={'/home'}>Home</NavLink>
+            <NavLink className={css.Home} to={'/home'}>Movie Word</NavLink>
             <div className={css.Header}>
                 <NavLink to={'/movies'}>
                     <button>
