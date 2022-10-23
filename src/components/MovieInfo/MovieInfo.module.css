@@ -1,8 +1,8 @@
 .Info {
     border: 3px solid slategrey;
     border-radius: 20px;
-    width: 15%;
-    margin-bottom: 20px;
+    width: 17%;
+    margin: 10px;
     font-size: 12px;
     text-align: center;
     display: flex;
@@ -21,4 +21,7 @@
     border: 2px solid lightslategrey;
     border-radius: 15px;
     padding: 2px;
+}
+.Info button{
+    border: none;
 }

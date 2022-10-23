@@ -2,7 +2,7 @@ import {SearchMovie} from "../../components";
 
 export const MoviePage = () => {
 
-    return(
+    return (
         <div>
             <SearchMovie/>
         </div>

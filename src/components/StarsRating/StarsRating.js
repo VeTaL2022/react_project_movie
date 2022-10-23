@@ -7,7 +7,7 @@ export const StarsRating = ({rate}) => {
             rating={rate}
             starRatedColor="yellow"
             numberOfStars={10}
-            starDimension='28px'
+            starDimension='25px'
         />
     )
 

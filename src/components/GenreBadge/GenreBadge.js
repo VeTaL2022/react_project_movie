@@ -33,7 +33,7 @@ export const GenreBadge = () => {
                     ))}
                 </select>
             </form>
-            <div>
+            <div className={css.Flex}>
                 {genre && genre.map(gen => <MovieInfo movie={gen} key={gen.id}/>)}
             </div>
         </div>

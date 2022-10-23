@@ -28,7 +28,7 @@ export const MovieList = () => {
     return (
         <div>
             <div className={css.Button}>
-                <button onClick={prevPage}>Prev</button>
+                <button onClick={prevPage}>Previous</button>
                 <button onClick={nextPage}>Next</button>
             </div>
             <div className={css.Flex}>

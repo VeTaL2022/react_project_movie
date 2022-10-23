@@ -19,6 +19,8 @@
 
 .Flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
 }
