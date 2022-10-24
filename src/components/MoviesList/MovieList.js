@@ -9,14 +9,14 @@ import css from './MovieList.module.css';
 export const MovieList = () => {
     const dispatch = useDispatch();
 
-    const {movie} = useSelector(state => state.movieReducer);
+    const {movie, page} = useSelector(state => state.movieReducer);
     const {results} = movie;
 
     const [query, setQuery] = useSearchParams({page: '1'});
 
     useEffect(() => {
         dispatch(movieActions.getAll({page: query.get('page')}))
-    }, [dispatch, movie.page, query]);
+    }, [dispatch, query]);
 
     const prevPage = () => {
         setQuery(value => ({page: value.get('page') - 1}));
@@ -28,8 +28,8 @@ export const MovieList = () => {
     return (
         <div>
             <div className={css.Button}>
-                <button disabled={!movie.page} onClick={prevPage}>Previous</button>
-                <button disabled={!movie.page} onClick={nextPage}>Next</button>
+                <button disabled={!page} onClick={prevPage}>Previous</button>
+                <button disabled={!page} onClick={nextPage}>Next</button>
             </div>
             <div className={css.Flex}>
                 {results?.map((movie, index) => <MovieInfo movie={movie} key={index}/>)}

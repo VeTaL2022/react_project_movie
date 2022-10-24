@@ -1,10 +1,10 @@
-import {GenreBadge} from "../../components";
+import {GenresMovie} from "../../components";
 
 export const GenresPage = () => {
 
     return(
         <div>
-            <GenreBadge/>
+            <GenresMovie/>
         </div>
     )
 

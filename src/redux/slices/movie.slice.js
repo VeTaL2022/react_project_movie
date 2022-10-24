@@ -4,7 +4,8 @@ import {movieService} from "../../services";
 
 const initialState = {
     movie: {},
-    movieName: []
+    movieName: [],
+    page: null
 };
 const getAll = createAsyncThunk(
     'movieSlice/getAll',
@@ -38,6 +39,8 @@ const movieSlice = createSlice({
         builder
             .addCase(getAll.fulfilled, (state, action) => {
                 state.movie = action.payload;
+
+                state.page = action.payload.page;
             })
             .addCase(getMovieByName.fulfilled, (state, action) => {
                 state.movieName = action.payload
