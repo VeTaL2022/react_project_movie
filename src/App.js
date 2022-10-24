@@ -1,8 +1,8 @@
 import {Navigate, Route, Routes} from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 
-import {MoviesListCard} from "./components/MoviesListCard/MoviesListCard";
-import {GenresPage, HomePage, MoviePage, MoviesPage} from "./pages";
+import {GenresPage, HomePage, SearchMoviePage, MoviesPage} from "./pages";
+import {MovieDetailsPage} from "./pages";
 import {MainLayout} from "./layouts";
 import './App.css';
 
@@ -26,10 +26,15 @@ function App() {
                 <Route path={'/'} element={<MainLayout/>}>
                     <Route index element={<Navigate to={'home'}/>}/>
                     <Route path={'home'} element={<HomePage/>}/>
+
                     <Route path={'movies'} element={<MoviesPage/>}/>
-                    <Route path={'movies/:id'} element={<MoviesListCard/>}/>
-                    <Route path={'find-movie'} element={<MoviePage/>}/>
+                    <Route path={'movies/:title'} element={<MovieDetailsPage/>}/>
+
+                    <Route path={'find-movie'} element={<SearchMoviePage/>}/>
+                    <Route path={'find-movie/:title'} element={<MovieDetailsPage/>}/>
+
                     <Route path={'genres'} element={<GenresPage/>}/>
+                    <Route path={'genres/:title'} element={<MovieDetailsPage/>}/>
                 </Route>
             </Routes>
 

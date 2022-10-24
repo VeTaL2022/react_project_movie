@@ -1,8 +1,8 @@
-import {NavLink} from "react-router-dom";
-import css from './Header.module.css';
-
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFilm, faMagnifyingGlass, faSort} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {NavLink} from "react-router-dom";
+
+import css from './Header.module.css';
 
 export const Header = () => {
 
@@ -27,6 +27,5 @@ export const Header = () => {
                 </NavLink>
             </div>
         </div>
-    )
-
-}
+    );
+};

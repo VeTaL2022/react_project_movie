@@ -1,5 +1,6 @@
-import {MovieList} from "../../components";
 import {Outlet} from "react-router-dom";
+
+import {MovieList} from "../../components";
 
 export const MoviesPage = () => {
 

@@ -2,8 +2,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {useSearchParams} from "react-router-dom";
 import {useEffect} from "react";
 
-import {movieActions} from "../../redux";
 import {MovieInfo} from "../MovieInfo/MovieInfo";
+import {movieActions} from "../../redux";
 import css from './MovieList.module.css';
 
 export const MovieList = () => {

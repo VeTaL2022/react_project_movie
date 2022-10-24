@@ -1,6 +1,6 @@
 import {SearchMovie} from "../../components";
 
-export const MoviePage = () => {
+export const SearchMoviePage = () => {
 
     return (
         <div>

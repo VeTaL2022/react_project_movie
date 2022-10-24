@@ -13,14 +13,15 @@
 }
 
 .Form button:hover {
-    background-color: cornflowerblue;
     color: snow;
+    background-color: cornflowerblue;
 }
 
 .Flex {
+    width: 80%;
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
 }

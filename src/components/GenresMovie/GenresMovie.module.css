@@ -1,23 +1,25 @@
 .Genre form {
     text-align: center;
+
     font-family: cursive;
     font-size: 20px;
 }
 
 .Genre form select, option {
     margin: 5px;
+    border-radius: 5px;
     text-align: center;
+
     font-family: cursive;
     font-size: 14px;
-    border-radius: 5px;
     cursor: pointer;
-
 }
 
 .Flex {
+    margin: 0 auto;
+    width: 80%;
+
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 80%;
-    margin: 0 auto;
 }

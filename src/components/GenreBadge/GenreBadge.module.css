@@ -1,0 +1,18 @@
+.Badge {
+    color: darkslategrey;
+    background-color: gainsboro;
+
+    font-size: x-small;
+    font-family: "Comic Sans MS", sans-serif;
+
+    border: 2px solid grey;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.Badge div {
+    margin: 2px;
+}

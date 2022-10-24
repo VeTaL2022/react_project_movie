@@ -1,24 +1,32 @@
-.Button{
- display: flex;
+.Button {
+    height: 40px;
+
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
 }
-.Button button{
+
+.Button button {
     padding: 3px 6px 3px 6px;
+
     cursor: pointer;
-    font-family: cursive;
     font-size: medium;
+    font-family: cursive;
 }
-.Button button:hover{
-    background-color: cornflowerblue;
-    color: snow;
+
+.Button button:hover {
     padding: 5px 10px 5px 10px;
+
+    color: snow;
+    background-color: cornflowerblue;
+
 }
-.Flex{
+
+.Flex {
+    margin: 0 auto;
+    width: 80%;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
 }

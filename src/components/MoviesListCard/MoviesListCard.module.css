@@ -1,9 +1,10 @@
 .Details {
+    margin: 0 auto;
+    width: 45%;
     text-align: center;
+
     border: 3px solid black;
     border-radius: 10px;
-    width: 40%;
-    margin: 0 auto;
     background-image: url("https://img5.goodfon.ru/wallpaper/nbig/2/27/zelenyi-fon-tekstura-abstract-background-green-color.jpg");
 }
 
@@ -12,17 +13,18 @@
 }
 
 .Details > button {
-    padding: 5px 8px 5px 8px;
-    display: flex;
     background-color: lightblue;
     border: 2px solid grey;
     color: slategrey;
+
+    padding: 5px 8px 5px 8px;
+    display: flex;
 }
 
 .Details button:hover {
-    padding: 8px 15px 8px 15px;
-    background-color: cornflowerblue;
     color: snow;
+    background-color: cornflowerblue;
+    padding: 8px 15px 8px 15px;
 }
 
 .Title {
@@ -36,23 +38,26 @@
 }
 
 .VoteAvg {
+    width: 7%;
+    margin-right: 10px;
+    padding: 5px 10px 5px 10px;
+
     border: 2px solid grey;
     border-radius: 10px;
-    padding: 5px 10px 5px 10px;
-    width: 7%;
-    background: lightgrey;
     color: darkgoldenrod;
-    margin-right: 10px;
+    background: lightgrey;
 }
 
 .VoteCount {
+    width: 8%;
+    margin-right: 10px;
+    padding: 4px 9px 4px 9px;
+
     border: 2px solid lightslategrey;
     border-radius: 12px;
-    width: 8%;
-    padding: 4px 9px 4px 9px;
-    background-color: lawngreen;
+
     color: snow;
-    margin-right: 10px;
+    background-color: lawngreen;
 }
 
 .Main {
@@ -60,8 +65,8 @@
 }
 
 .Main > img {
-    margin: 5px;
     min-height: 300px;
+    margin: 5px;
 }
 
 .Text {

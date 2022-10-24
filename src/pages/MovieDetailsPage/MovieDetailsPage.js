@@ -1,4 +1,4 @@
-import {MoviesListCard} from "../../components/MoviesListCard/MoviesListCard";
+import {MoviesListCard} from "../../components";
 
 export const MovieDetailsPage = () => {
 
