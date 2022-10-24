@@ -8,9 +8,15 @@
     transition: all .5s;
 }
 
+.App > button {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+}
+
 .App > button:hover {
-    background-color: cornflowerblue;
     color: snow;
+    background-color: cornflowerblue;
 }
 
 button {
