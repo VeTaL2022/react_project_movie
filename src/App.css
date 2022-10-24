@@ -7,6 +7,12 @@
     height: calc(100%);
     transition: all .5s;
 }
+
+.App > button:hover {
+    background-color: cornflowerblue;
+    color: snow;
+}
+
 button {
     color: var(--text-primary);
     background-color: var(--background);

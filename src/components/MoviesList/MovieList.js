@@ -28,8 +28,8 @@ export const MovieList = () => {
     return (
         <div>
             <div className={css.Button}>
-                <button onClick={prevPage}>Previous</button>
-                <button onClick={nextPage}>Next</button>
+                <button disabled={!movie.page} onClick={prevPage}>Previous</button>
+                <button disabled={!movie.page} onClick={nextPage}>Next</button>
             </div>
             <div className={css.Flex}>
                 {results?.map((movie, index) => <MovieInfo movie={movie} key={index}/>)}

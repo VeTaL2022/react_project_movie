@@ -26,9 +26,8 @@ function App() {
                 <Route path={'/'} element={<MainLayout/>}>
                     <Route index element={<Navigate to={'home'}/>}/>
                     <Route path={'home'} element={<HomePage/>}/>
-                    <Route path={'movies'} element={<MoviesPage/>}>
-                        <Route path={':id'} element={<MoviesListCard/>}/>
-                    </Route>
+                    <Route path={'movies'} element={<MoviesPage/>}/>
+                    <Route path={'movies/:id'} element={<MoviesListCard/>}/>
                     <Route path={'find-movie'} element={<MoviePage/>}/>
                     <Route path={'genres'} element={<GenresPage/>}/>
                 </Route>
