@@ -21,6 +21,7 @@ export const MovieList = () => {
     const prevPage = () => {
         setQuery(value => ({page: value.get('page') - 1}));
     }
+
     const nextPage = () => {
         setQuery(value => ({page: +value.get('page') + 1}))
     }
