@@ -42,7 +42,7 @@ const movieSlice = createSlice({
                 state.page = action.payload.page;
             })
             .addCase(getMovieByName.fulfilled, (state, action) => {
-                state.movieName = action.payload
+                state.movieName = action.payload;
             })
 });
 

@@ -2,10 +2,9 @@ import {GenresMovie} from "../../components";
 
 export const GenresPage = () => {
 
-    return(
+    return (
         <div>
             <GenresMovie/>
         </div>
-    )
-
-}
+    );
+};

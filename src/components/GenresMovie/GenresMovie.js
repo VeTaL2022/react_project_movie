@@ -8,19 +8,19 @@ import css from './GenresMovie.module.css';
 import {genreActions} from "../../redux";
 
 export const GenresMovie = () => {
-    const {register, handleSubmit} = useForm({defaultValues: {id: 1}});
+    const {register, handleSubmit} = useForm();
 
-    const dispatch = useDispatch();
     const {genres} = useSelector(state => state.genreReducer);
+    const dispatch = useDispatch();
 
-    const [genre, setGenre] = useState(null);
+    const [genre, setGenre] = useState([]);
 
     useEffect(() => {
         dispatch(genreActions.getAll());
     }, [dispatch]);
 
     const getMoviesByGenre = async ({id}) => {
-        const {data} = await movieService.getAll();
+        const {data} = await movieService.getMoviesByGenre(id);
         const {results} = data;
         const genreById = results.filter(value => value["genre_ids"].includes(+id));
         setGenre(genreById);
@@ -36,7 +36,7 @@ export const GenresMovie = () => {
                 </select>
             </form>
             <div className={css.Flex}>
-                {genre && genre.map(gen => <MovieInfo movie={gen} key={gen.id}/>)}
+                {genre?.map(gen => <MovieInfo movie={gen} key={gen.id}/>)}
             </div>
         </div>
     )
