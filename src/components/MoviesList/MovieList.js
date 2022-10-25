@@ -9,7 +9,7 @@ import css from './MovieList.module.css';
 export const MovieList = () => {
     const dispatch = useDispatch();
 
-    const {movie, page, loading, error} = useSelector(state => state.movieReducer);
+    const {movie, loading, error} = useSelector(state => state.movieReducer);
     const {results} = movie;
 
     const [query, setQuery] = useSearchParams({page: '1'});
@@ -29,8 +29,8 @@ export const MovieList = () => {
     return (
         <div>
             <div className={css.Button}>
-                <button disabled={!page} onClick={prevPage}>Previous</button>
-                <button disabled={!page} onClick={nextPage}>Next</button>
+                <button disabled={query.get('page') === '1'} onClick={prevPage}>Previous</button>
+                <button disabled={query.get('page') === '500'} onClick={nextPage}>Next</button>
             </div>
 
             <div className={css.Flex}>

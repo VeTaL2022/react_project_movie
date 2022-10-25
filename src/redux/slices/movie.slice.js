@@ -5,7 +5,6 @@ import {movieService} from "../../services";
 const initialState = {
     movie: {},
     movieName: [],
-    page: null,
     loading: false,
     error: null
 };
@@ -44,7 +43,6 @@ const movieSlice = createSlice({
             })
             .addCase(getAll.fulfilled, (state, action) => {
                 state.movie = action.payload;
-                state.page = action.payload["page"];
                 state.loading = false;
             })
             .addCase(getAll.rejected, (state, action) => {
