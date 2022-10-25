@@ -6,6 +6,5 @@ export const HomePage = () => {
         <div>
             <PosterPreview/>
         </div>
-    )
-
-}
+    );
+};

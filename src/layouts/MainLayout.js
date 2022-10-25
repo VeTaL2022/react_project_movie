@@ -9,6 +9,5 @@ export const MainLayout = () => {
             <Header/>
             <Outlet/>
         </div>
-    )
-
-}
+    );
+};

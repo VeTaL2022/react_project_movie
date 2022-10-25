@@ -3,4 +3,4 @@ import {urls} from "../configs";
 
 export const genreService = {
     getAll: () => axiosService.get(urls.genres)
-}
+};

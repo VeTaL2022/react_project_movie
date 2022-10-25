@@ -10,4 +10,4 @@ const token = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YTkwMTNkMTdmNWE2YmIwYTJhMTMxZmQz
 axiosService.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`;
     return config;
-})
+});

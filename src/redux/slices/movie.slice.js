@@ -6,6 +6,8 @@ const initialState = {
     movie: {},
     movieName: [],
     page: null,
+    loading: false,
+    error: null
 };
 const getAll = createAsyncThunk(
     'movieSlice/getAll',
@@ -37,12 +39,29 @@ const movieSlice = createSlice({
     reducers: {},
     extraReducers: builder =>
         builder
+            .addCase(getAll.pending, (state) => {
+                state.loading = true;
+            })
             .addCase(getAll.fulfilled, (state, action) => {
                 state.movie = action.payload;
-                state.page = action.payload.page;
+                state.page = action.payload["page"];
+                state.loading = false;
+            })
+            .addCase(getAll.rejected, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
+            })
+
+            .addCase(getMovieByName.pending, (state) => {
+                state.loading = true;
             })
             .addCase(getMovieByName.fulfilled, (state, action) => {
                 state.movieName = action.payload;
+                state.loading = false;
+            })
+            .addCase(getMovieByName.rejected, (state, action) => {
+                state.error = action.payload;
+                state.loading = false;
             })
 });
 

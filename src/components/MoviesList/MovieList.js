@@ -9,7 +9,7 @@ import css from './MovieList.module.css';
 export const MovieList = () => {
     const dispatch = useDispatch();
 
-    const {movie, page} = useSelector(state => state.movieReducer);
+    const {movie, page, loading, error} = useSelector(state => state.movieReducer);
     const {results} = movie;
 
     const [query, setQuery] = useSearchParams({page: '1'});
@@ -32,7 +32,10 @@ export const MovieList = () => {
                 <button disabled={!page} onClick={prevPage}>Previous</button>
                 <button disabled={!page} onClick={nextPage}>Next</button>
             </div>
+
             <div className={css.Flex}>
+                {loading && <h2>Loading............</h2>}
+                {error && <h2>Error</h2>}
                 {results?.map((movie, index) => <MovieInfo movie={movie} key={index}/>)}
             </div>
         </div>

@@ -14,20 +14,20 @@ export const PosterPreview = () => {
         movieService.getAll().then(({data}) => setMovies(data.results));
     }, []);
 
-
     return (
         <div>
             <Carousel className={css.Carousel} autoPlay={true}>
                 {movies.map(movie =>
                     <div key={movie.id}>
+
                         <button onClick={() => navigate(`/movies/${movie.title}`, {state: {...movie}})}>
-                            <img src={"https://image.tmdb.org/t/p/w300/" + movie.poster_path}
+                            <img src={"https://image.tmdb.org/t/p/w300/" + movie["poster_path"]}
                                  alt={movie.title}/>
                         </button>
+
                     </div>
                 )}
             </Carousel>
         </div>
-    )
-
-}
+    );
+};

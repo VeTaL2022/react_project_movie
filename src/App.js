@@ -6,7 +6,7 @@ import {MovieDetailsPage} from "./pages";
 import {MainLayout} from "./layouts";
 import './App.css';
 
-function App() {
+export default function App() {
     const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
@@ -40,6 +40,4 @@ function App() {
 
         </div>
     );
-}
-
-export default App;
+};

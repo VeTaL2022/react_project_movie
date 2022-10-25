@@ -5,7 +5,7 @@ import {genreActions} from "../../redux";
 import css from './GenreBadge.module.css';
 
 export const GenreBadge = ({genre}) => {
-    const {genres} = useSelector(state => state.genreReducer);
+    const {genres, loading, error} = useSelector(state => state.genreReducer);
 
     const dispatch = useDispatch();
 
@@ -24,8 +24,9 @@ export const GenreBadge = ({genre}) => {
 
     return (
         <div className={css.Badge}>
+            {loading && <h2>Loading............</h2>}
+            {error && <h2>Error</h2>}
             {genreOfMovie.map((genre, index) => <div key={index}><i>{genre}</i></div>)}
         </div>
-    )
-
-}
+    );
+};

@@ -9,6 +9,5 @@ export const MoviesPage = () => {
             <MovieList/>
             <Outlet/>
         </div>
-    )
-
-}
+    );
+};

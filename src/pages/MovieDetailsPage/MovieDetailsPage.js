@@ -6,5 +6,5 @@ export const MovieDetailsPage = () => {
         <div>
             <MoviesListCard/>
         </div>
-    )
-}
+    );
+};

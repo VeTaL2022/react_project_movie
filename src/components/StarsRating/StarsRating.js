@@ -9,6 +9,5 @@ export const StarsRating = ({rate}) => {
             numberOfStars={10}
             starDimension='22px'
         />
-    )
-
-}
+    );
+};
